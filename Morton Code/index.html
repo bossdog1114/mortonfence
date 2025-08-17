@@ -6,23 +6,55 @@
   <title>Morton Fencing Company</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  
+<style>
+  /* Floating Back to Top Button */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f7a100; /* button color */
+    color: #0d274d; /* text color */
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+  }
+
+  #backToTop:hover {
+    background-color: #0d274d;
+    color: #f7a100;
+    transform: translateY(-3px);
+  }
+
+  /* Optional smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark  px-3">
-    <img src="assets/Morton logo outerglow copy.png" alt="Bootstrap" width="100" height="100">
+  <nav id="main-navbar" Class="navbar navbar-expand-lg navbar-dark  px-3 w-100">
+    <a href="index.html">
+  <img src="assets/Morton logo outerglow copy.png" alt="Bootstrap" width="100" height="100">
+</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href=".//index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why-choose">Why Choose Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services-overview">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#free-estimate">Free Estimate</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact Us</a></li>
       </ul>
     </div>
   </nav>
@@ -36,8 +68,8 @@
   </section>
 
   <!-- Why Choose Section -->
-  <section class="py-5">
-    <div class="container">
+  <section class="py-5" id="why-choose">
+    <div class="container" >
       <h3 class="text-center mb-4">Why Choose Morton Fencing Company in Central Indianapolis, Indiana?</h3>
       <p class="text-center">
         At Morton Fencing Company, we combine craftsmanship, reliability, and local expertise to deliver fencing solutions that stand the test of time...
@@ -46,7 +78,7 @@
   </section>
 
   <!-- Services Overview -->
-  <section class="section-dark py-5">
+  <section class="section-dark py-5" id="services-overview">
     <div class="container">
       <h4 class="text-center mb-5">Specializing in Residential, Commercial, and Multi-Family Projects</h4>
       <div class="row text-center">
@@ -67,7 +99,7 @@
   </section>
 
   <!-- Product Grid -->
-  <section class="py-5 product-grid">
+  <section class="py-5 product-grid" id="Gallery">
     <div class="container">
       <div class="row row-cols-2 row-cols-md-4 g-4">
         <!-- Repeat this block for each product -->
@@ -109,16 +141,18 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="text-white py-5" style="background: url('assets/build 1.png') center/cover no-repeat;">
+  <section class="text-white py-5" id="free-estimate">
     <div class="container text-center">
-      <h2></h2>
-      <p></p>
-      <button class="btn btn-light mt-3">To Receive Your Free Estimate</button>
+       <h3 class="text-center mb-4">Install Your Fence Today!</h3>
+      <p class="text-center">
+        If you want to improve both the look and safety of your property, choose Morton Fencing in Indianapolis. We deeply appreciate our customers, which is why you can rely on us to install your fence with top-quality materials and the most competitive prices.
+      </p>
+      <button class="btn btn-light mt-3" onclick="window.location.href='contactus.html'">To Receive Your Free Estimate</button>
     </div>
   </section>
 
   <!-- Reviews -->
-  <section class="py-5">
+  <section class="py-5" id="reviews">
     <div class="container text-center">
       <h3>Reviews</h3>
       <div class="row mt-4">
@@ -136,24 +170,48 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer id="main-footer">
+    
     <div class="container">
       <div class="row text-center text-md-start">
         <div class="col-md-6 mb-3">
-          <p>© Morton Fencing Co</p>
+          <p><a href="index.html">© Morton Fencing Co</a></p>
           <p>497 Evergreen Rd, Roseville, CA 95673</p>
           <p>+44 345 678 903</p>
-          <p>sales@email.com</p>
+          <p><a href="mailto:fencingmorton@gmail.com">fencingmorton@gmail.com</a>
+</p>
         </div>
         <div class="col-md-6 text-md-end">
-          <a href="#" class="text-white me-3">Facebook</a>
-          <a href="#" class="text-white me-3">Twitter</a>
-          <a href="#" class="text-white">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=100085856826761" class="text-white me-3">Facebook</a>
+         <!-- <a href="#" class="text-white me-3">Twitter</a> -->
+          <a href="https://www.instagram.com/morton_fencing?igsh=MWszajJqcTYxbGJvYQ==" class="text-white">Instagram</a>
         </div>
+        <a href="https://josephkempproductions.com/" class="text-white mt-3 d-block">Website by Joseph Kemp Productions</a>
       </div>
     </div>
   </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="scrollToTop()">Top</button>
+
+<script>
+  
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+
+
+  btn.style.display = 'none';
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -79,7 +79,7 @@ section h2, section h3, section h4 {
 
 /* Call-to-Action Section */
 section.text-white {
-  background: url('assets/build 1.png') center/cover no-repeat;
+  background: url('assets/build\ final\ 1.0.png') center/cover no-repeat;
   padding: 80px 20px;
   position: relative;
   color: #fff;
@@ -96,6 +96,15 @@ section.text-white .btn {
   font-weight: bold;
   margin-top: 20px;
   padding: 10px 25px;
+   font-size: 1.1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for nice feedback */
+section.text-white .btn:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
 }
 
 /* Reviews Section */
@@ -107,6 +116,7 @@ section.py-5 .col-md-4 p {
 }
 
 /* Footer */
+
 footer {
   background-color: #f7a100;
   color: white;
@@ -127,13 +137,39 @@ footer a:hover {
 footer p {
   margin: 5px 0;
 }
-
+#main-footer {
+  width: 100%;
+  margin: 0;
+}
 /* Responsive Tweak */
+/* Tablet */
+@media (max-width: 992px) {
+  section.text-white h2 {
+    font-size: 2rem;
+  }
+  section.text-white .btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
 
+   section.text-white h2 {
+    font-size: 1.6rem;
+  }
+
+   section.text-white .btn {
+    display: block;       /* centers button */
+    margin: 15px auto;    /* adds spacing */
+    font-size: 0.95rem;
+    padding: 9px 20px;
+    width: auto;          /* shrink-wrap to text */
+    max-width: 90%;       /* prevent overflow */
+  }
   .cta-btn {
     font-size: 0.9rem;
     padding: 10px 20px;
@@ -141,5 +177,16 @@ footer p {
 
   .product-grid img {
     height: 150px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  section.text-white h2 {
+    font-size: 1.3rem;
+  }
+  section.text-white .btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
   }
 }
